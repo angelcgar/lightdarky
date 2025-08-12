@@ -1,0 +1,40 @@
+{
+  "name": "lightdarky",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A tiny library to manage light/dark mode in web applications.",
+  "main": "dist/themeToggle.js",
+  "module": "dist/themeToggle.js",
+  "types": "dist/themeToggle.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/themeToggle.js",
+      "types": "./dist/themeToggle.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.1.0"
+  },
+  "keywords": [
+    "light",
+    "dark",
+    "mode",
+    "theme",
+    "toggle",
+    "switch",
+    "javascript",
+    "typescript",
+    "web",
+    "library"
+  ],
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
+}
