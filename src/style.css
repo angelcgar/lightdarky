@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* === Variantes personalizadas === */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* === Variables de color para temas === */
+:root,
+html[data-theme="light"] {
+  --background: #fdfdfd;
+  --foreground: #1a1a1a;
+  --accent: #3b82f6; /* azul Tailwind-500 */
+  --muted: #e5e7eb;  /* gray-200 */
+  --border: #d1d5db; /* gray-300 */
+}
+
+html[data-theme="dark"] {
+  --background: #111827; /* gray-900 */
+  --foreground: #f3f4f6; /* gray-100 */
+  --accent: #f59e0b;     /* amber-500 */
+  --muted: #374151;      /* gray-700 */
+  --border: #4b5563;     /* gray-600 */
+}
+
+/* === Mapear variables a tokens de Tailwind === */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+/* === Estilos globales (reset + base) === */
+@layer base {
+  * {
+    @apply border-border outline-accent/75;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply flex min-h-screen flex-col bg-background text-foreground font-sans selection:bg-accent/70 selection:text-background;
+  }
+  a, button {
+    @apply outline-offset-1 outline-accent focus-visible:outline-2 focus-visible:outline-dashed;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  header, section, footer {
+    @apply mx-auto max-w-4xl px-4;
+  }
+}
+
+/* === Clase personalizada para navegación activa === */
+.active-link {
+  @apply underline decoration-wavy decoration-2 underline-offset-4 text-accent;
+}
