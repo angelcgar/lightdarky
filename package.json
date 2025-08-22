@@ -1,7 +1,7 @@
 {
   "name": "lightdarky",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tiny library to manage light/dark mode in web applications.",
   "main": "dist/themeToggle.js",
   "module": "dist/themeToggle.js",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc"
+    "build": "tsc && cp src/style.css dist/"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.12",
