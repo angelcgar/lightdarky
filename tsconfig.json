@@ -7,10 +7,7 @@
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-    "noEmit": true
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
